@@ -9,7 +9,7 @@ import static dev.arran.jlox.TokenType.*;
 
 class Scanner {
 
-    private static final Map<String, TokenType> keywords;
+    static final Map<String, TokenType> keywords;
     private final String source;
     private final List<Token> tokens = new ArrayList<>();
     private int start = 0;
@@ -47,7 +47,7 @@ class Scanner {
             scanToken();
         }
 
-        tokens.add(new Token(EOF, "",null,line));
+        tokens.add(new Token(EOF, "",null, line));
         return tokens;
     }
 
